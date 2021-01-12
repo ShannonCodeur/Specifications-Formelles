@@ -1,0 +1,6 @@
+agenda électronique:
+    Spécifications : déterminer les types à créer
+    définir les types
+    définir les sources
+    écrire les propres fonctions
+    écrire des spécifications PVS et effectuer des preuves de programmes
