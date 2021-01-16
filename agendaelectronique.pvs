@@ -1,0 +1,28 @@
+agendaelectronique: THEORY
+  BEGIN     
+    N: TYPE % Nom
+    E: TYPE % Adresse électronique
+    A: TYPE = [N -> E] % Agenda électronique
+    % Méthode permettant de spécifier (Définir) un agenda électronique vide %
+
+    email: E
+    agendaVide: A
+    axiomeAgendaVide: AXIOM 
+        FORALL (nom: N): agendaVide(nom) = email
+    
+    % Méthode permettant de rechercher une adresse électronique dans le carnet d'adresse
+    rechercheAdresse: [A, N -> E]
+    axiomeRechercheAdresse: AXIOM
+        FORALL (agenda: A), (nom: N): rechercheAdresse(agenda, nom) = agenda(nom)
+
+    % Méthode permettant d'ajouter une nouvelle adresse électronique
+    ajoutAdresse: [A, N, E -> A]
+    axiomeAjoutAdresse: AXIOM
+        FORALL (agenda: A), (nom: N), (email: E):
+            ajoutAdresse(agenda, nom, email) = agenda WITH [(nom) := email]
+    % Recherche d'une adresse électronique sachant le nom % 
+    rechercheAdresse: CONJECTURE 
+        FORALL (agenda: A), (nom: N), (email: E):
+            rechercheAdresse(ajoutAdresse(agenda, nom, email), nom) = email        
+
+  END agendaelectronique

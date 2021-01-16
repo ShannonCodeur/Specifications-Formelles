@@ -1,6 +1,12 @@
 agenda électronique:
-    Spécifications : déterminer les types à créer
-    définir les types
-    définir les sources
-    écrire les propres fonctions
-    écrire des spécifications PVS et effectuer des preuves de programmes
+    Devoir: 
+        Spécifications : déterminer les types à créer
+        définir les types
+        définir les sources
+        écrire les propres fonctions
+        écrire des spécifications PVS et effectuer des preuves de programmes
+    Spécifications élémentaires:
+        Un Agenda électronique doit garder un certain type d'informations personnelles
+        Pour le cas des adresses e-mail par exemple, il doit stocker les emails et les propriétaires
+        il doit être possible de retrouver une adresse email avec en tapant le nom
+        Il doit être possible d'ajouter et de supprimer des adresses dans l'agenda     
